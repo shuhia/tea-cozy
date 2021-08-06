@@ -1,20 +1,22 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+  opacity: 0.9;
+  background-color: black;
+  color: seashell;
 }
 
 body {
   font-family: Helvetica;
   font-size: 22px;
-  color: seashell;
-  opacity: 0.9;
-  background-color: black;
+  margin: 0;
+  padding: 0;
 }
 
 header {
   display: flex;
-  position: fixed;
+  position: sticky;
+  position: -webkit-sticky;
   height: 69px;
   width: 100%;
   top: 0;
@@ -22,6 +24,31 @@ header {
   justify-content: space-between;
   padding: 10px;
   border-bottom: 1px solid seashell;
+  z-index: 10;
+  background-color: black;
+}
+
+section {
+  display: flex;
+  position: relative;
+  flex-flow: column;
+  margin: 20px;
+  text-align: center;
+}
+
+.intro {
+  display: flex;
+  aspect-ratio: 1200/700;
+  justify-content: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .logo {
@@ -38,9 +65,13 @@ header {
 .menu ol {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
   gap: 20px;
 }
 
 .menu li a {
+  margin: 0;
+  padding: 0;
   color: seashell;
 }

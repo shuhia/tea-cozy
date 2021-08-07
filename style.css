@@ -4,7 +4,7 @@
   box-sizing: border-box;
 
   opacity: 0.9;
-  background-color: black;
+
   color: seashell;
 }
 
@@ -13,6 +13,7 @@ body {
   font-size: 22px;
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 
 header {
@@ -33,9 +34,10 @@ header {
 section {
   display: flex;
   position: relative;
-  flex-flow: column;
+  flex-direction: column;
   margin: 20px;
   text-align: center;
+  justify-content: center;
 }
 
 /* HEADER */
@@ -97,6 +99,8 @@ section {
 .card {
   display: flex;
   flex-direction: column;
+  opacity: 1;
+  background-color: black;
 }
 
 .card-name {
@@ -106,4 +110,26 @@ section {
 .card-image {
   width: 300px;
   height: 200px;
+}
+
+.locations {
+  aspect-ratio: 1200/500;
+}
+
+.locations-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.locations .card {
+  width: 300px;
+}
+
+.locations h2 {
+  margin-bottom: 15px;
 }
